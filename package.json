@@ -1,0 +1,24 @@
+{
+  "name": "jluzh-hx",
+  "version": "0.0.1",
+  "description": "面向网页制作的ui组",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hx-angry-panda/jluzh-Graduation-Project.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI",
+    "Components"
+  ],
+  "author": "Hx",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hx-angry-panda/jluzh-Graduation-Project/issues"
+  },
+  "homepage": "https://github.com/Hx-angry-panda/jluzh-Graduation-Project#readme"
+}
