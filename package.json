@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Hx-angry-panda/jluzh-Graduation-Project/issues"
   },
-  "homepage": "https://github.com/Hx-angry-panda/jluzh-Graduation-Project#readme"
+  "homepage": "https://github.com/Hx-angry-panda/jluzh-Graduation-Project#readme",
+  "dependencies": {
+    "vue": "^2.6.11"
+  }
 }
