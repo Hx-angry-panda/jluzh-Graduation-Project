@@ -11,7 +11,7 @@
         props: {
             name:{
                 validator(value){
-                    return['download','upload','setting','email','tel','address','like','filter'].indexOf(value) >= 0
+                    return['download','upload','setting','email','tel','address','like','filter','warning'].indexOf(value) >= 0
                 }
             }
         }

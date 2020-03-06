@@ -15,4 +15,19 @@
 
     --icon-width: 16px;
     --icon-height: 16px;
+
+    --input-width: 140px;
+    --input-padding: 7px 0.5em;
+    --input-color: #555555;
+    --input-font-size: 16px;
+    --input-border: 1px solid;
+    --input-border-color: #CCCCCC;
+    --input-border-radius: 5px;
+    --input-hover-color: #40A9FF;
+    --input-disable-color: #AAAAAA;
+    --input-disable-bg: #F2F2F2;
+    --input-disable-border-color: #CCCCCC;
+    --input-readonly-color: #AAAAAA;
+    --input-readonly-bg: #F2F2F2;
+    --input-readonly-border-color: #CCCCCC;
 }

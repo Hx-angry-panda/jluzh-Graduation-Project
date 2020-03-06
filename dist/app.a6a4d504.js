@@ -12495,7 +12495,7 @@ var _default = {
   props: {
     name: {
       validator: function validator(value) {
-        return ['download', 'upload', 'setting', 'email', 'tel', 'address', 'like', 'filter'].indexOf(value) >= 0;
+        return ['download', 'upload', 'setting', 'email', 'tel', 'address', 'like', 'filter', 'warning'].indexOf(value) >= 0;
       }
     }
   }
@@ -12761,7 +12761,152 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/app.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/input.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _icon = _interopRequireDefault(require("./icon"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+var _default = {
+  name: 'jluzh-Input',
+  components: {
+    'jluzh-icon': _icon.default
+  },
+  props: {
+    value: {
+      type: String
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    readonly: {
+      type: Boolean,
+      default: false
+    },
+    iserror: {
+      type: String
+    },
+    type: {
+      type: String,
+      default: 'text',
+      validator: function validator(value) {
+        return ['button', 'checkbox', 'color', 'date', 'datetime-local', 'email', 'file', 'hidden', 'month', 'number', 'password', 'radio', 'range', 'reset', 'search', 'submit', 'tel', 'text', 'time', 'url', 'week'].indexOf(value) >= 0;
+      }
+    },
+    required: {
+      type: Boolean,
+      default: false
+    }
+  }
+};
+exports.default = _default;
+        var $2374d8 = exports.default || module.exports;
+      
+      if (typeof $2374d8 === 'function') {
+        $2374d8 = $2374d8.options;
+      }
+    
+        /* template */
+        Object.assign($2374d8, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "jluzh-input" },
+    [
+      _c("input", {
+        attrs: {
+          disabled: _vm.disabled,
+          readonly: _vm.readonly,
+          type: _vm.type,
+          required: _vm.required
+        },
+        domProps: { value: _vm.value },
+        on: {
+          input: function($event) {
+            return _vm.$emit("input", $event.target.value)
+          },
+          change: function($event) {
+            return _vm.$emit("change", $event.target.value)
+          },
+          focus: function($event) {
+            return _vm.$emit("focus", $event.target.value)
+          },
+          blur: function($event) {
+            return _vm.$emit("blur", $event.target.value)
+          }
+        }
+      }),
+      _vm._v(" "),
+      _vm.iserror
+        ? [
+            _c("jluzh-icon", { attrs: { name: "warning" } }),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.iserror))])
+          ]
+        : _vm._e()
+    ],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-2374d8",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$2374d8', $2374d8);
+          } else {
+            api.reload('$2374d8', $2374d8);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"./icon":"src/icon.vue","_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -12772,6 +12917,8 @@ var _buttonGroup = _interopRequireDefault(require("./button-group"));
 
 var _icon = _interopRequireDefault(require("./icon"));
 
+var _input = _interopRequireDefault(require("./input"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue.default.component('jluzh-button', _button.default);
@@ -12780,10 +12927,26 @@ _vue.default.component('jluzh-button-group', _buttonGroup.default);
 
 _vue.default.component('jluzh-icon', _icon.default);
 
+_vue.default.component('jluzh-input', _input.default);
+
 new _vue.default({
-  el: '#app'
+  el: '#app',
+  methods: {
+    inputInput: function inputInput(e) {
+      console.log(e);
+    },
+    changeInput: function changeInput(e) {
+      console.log(e);
+    },
+    focusInput: function focusInput(e) {
+      console.log(e);
+    },
+    blurInput: function blurInput(e) {
+      console.log(e);
+    }
+  }
 });
-},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./button-group":"src/button-group.vue","./icon":"src/icon.vue"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./button-group":"src/button-group.vue","./icon":"src/icon.vue","./input":"src/input.vue"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

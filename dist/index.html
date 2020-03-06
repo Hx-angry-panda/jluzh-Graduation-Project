@@ -7,22 +7,30 @@
 <link rel="stylesheet" href="/app.a6a4d504.css"></head>
 <body>
     <div id="app" style="padding: 100px;">
-        <jluzh-button>按钮</jluzh-button>
-        <jluzh-button disabled="">禁用</jluzh-button>
-        <jluzh-button icon="download" icon-position="right">你好</jluzh-button>
-        <jluzh-button icon="like">你好</jluzh-button>
-
-        <jluzh-button-group>
-            <jluzh-button>按</jluzh-button>
-            <jluzh-button>你好</jluzh-button>
-            <jluzh-button>你好</jluzh-button>
-            <jluzh-button>你好</jluzh-button>
-            <jluzh-button>你好</jluzh-button>
-        </jluzh-button-group>
-
-        <jluzh-icon name="setting"></jluzh-icon>
-        <jluzh-icon name="download"></jluzh-icon>
+        <jluzh-input value="哈哈"></jluzh-input>
+        <jluzh-input value="禁止状态" disabled=""></jluzh-input>
+        <jluzh-input value="禁止编辑" readonly=""></jluzh-input>
+        <jluzh-input type="password" value="123456" iserror="错误"></jluzh-input>
+        <jluzh-input @input="inputInput"></jluzh-input>
+        <jluzh-input @change="changeInput"></jluzh-input>
+        <jluzh-input @focus="focusInput"></jluzh-input>
+        <jluzh-input @blur="blurInput"></jluzh-input>
     </div>
+<!--    <jluzh-button>按钮</jluzh-button>-->
+<!--    <jluzh-button disabled>禁用</jluzh-button>-->
+<!--    <jluzh-button icon="download" icon-position="right">你好</jluzh-button>-->
+<!--    <jluzh-button icon="like">你好</jluzh-button>-->
+
+<!--    <jluzh-button-group>-->
+<!--        <jluzh-button>按</jluzh-button>-->
+<!--        <jluzh-button>你好</jluzh-button>-->
+<!--        <jluzh-button>你好</jluzh-button>-->
+<!--        <jluzh-button>你好</jluzh-button>-->
+<!--        <jluzh-button>你好</jluzh-button>-->
+<!--    </jluzh-button-group>-->
+
+<!--    <jluzh-icon name="setting"></jluzh-icon>-->
+<!--    <jluzh-icon name="download"></jluzh-icon>-->
     <script src="/app.a6a4d504.js"></script>
 </body>
 </html>
