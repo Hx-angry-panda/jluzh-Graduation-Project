@@ -1,0 +1,18 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+:root{
+    /* 按钮样式 */
+    --button-padding: 7px 10px;
+    --button-font-color: #555555;
+    --button-border-color: #CCCCCC;
+    --button-border-radius: 5px;
+    --button-font-size: 16px;
+    --button-bg: white;
+    --button-hover-color: #40A9FF;
+    --button-active-color: #007BFF;
+    --button-disabled-color: #AAAAAA;
+    --button-disabled-bg: #F2F2F2;
+    --button-disabled-border-color: #CCCCCC;
+
+    --icon-width: 16px;
+    --icon-height: 16px;
+}

@@ -1,0 +1,100 @@
+.jluzh-icon[data-v-b485b3] {
+  width: var(--icon-width);
+  height: var(--icon-height);
+  vertical-align: middle;
+}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+:root{
+    /* 按钮样式 */
+    --button-padding: 7px 10px;
+    --button-font-color: #555555;
+    --button-border-color: #CCCCCC;
+    --button-border-radius: 5px;
+    --button-font-size: 16px;
+    --button-bg: white;
+    --button-hover-color: #40A9FF;
+    --button-active-color: #007BFF;
+    --button-disabled-color: #AAAAAA;
+    --button-disabled-bg: #F2F2F2;
+    --button-disabled-border-color: #CCCCCC;
+
+    --icon-width: 16px;
+    --icon-height: 16px;
+}
+
+.jluzh-button[data-v-a18091] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  padding: var(--button-padding);
+  color: var(--button-font-color);
+  border: 1px solid;
+  border-color: var(--button-border-color);
+  border-radius: var(--button-border-radius);
+  font-size: var(--button-font-size);
+  line-height: var(--button-font-size);
+  background: var(--button-bg);
+  outline: none;
+}
+.jluzh-button[data-v-a18091]:hover {
+  color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+}
+.jluzh-button[data-v-a18091]:active {
+  color: var(--button-active-color);
+  border-color: var(--button-active-color);
+}
+.jluzh-button > .icon[data-v-a18091] {
+  margin-right: 0.5em;
+  order: 1;
+}
+.jluzh-button > .content[data-v-a18091] {
+  order: 2;
+}
+.isDisabled[data-v-a18091] {
+  color: var(--button-disabled-color);
+  background: var(--button-disabled-bg);
+  border-color: var(--button-button-border-color);
+  cursor: not-allowed;
+}
+.isDisabled[data-v-a18091]:hover {
+  color: var(--button-disabled-color);
+  border-color: var(--button-button-border-color);
+}
+.isDisabled[data-v-a18091]:active {
+  color: var(--button-disabled-color);
+  background: var(--button-disabled-bg);
+}
+.icon-right > .icon[data-v-a18091] {
+  margin-right: 0;
+  margin-left: 0.5em;
+  order: 2;
+}
+.icon-right > .content[data-v-a18091] {
+  order: 1;
+}
+.jluzh-button-group[data-v-e5238b] {
+  display: inline-flex;
+  vertical-align: middle;
+}
+.jluzh-button-group > .jluzh-button[data-v-e5238b] {
+  border-radius: 0;
+}
+.jluzh-button-group > .jluzh-button[data-v-e5238b]:first-child {
+  border-top-left-radius: var(--button-border-radius);
+  border-bottom-left-radius: var(--button-border-radius);
+}
+.jluzh-button-group > .jluzh-button[data-v-e5238b]:last-child {
+  border-top-right-radius: var(--button-border-radius);
+  border-bottom-right-radius: var(--button-border-radius);
+}
+.jluzh-button-group > .jluzh-button[data-v-e5238b]:not(:first-child) {
+  margin-left: -1px;
+}
+.jluzh-button-group > .jluzh-button[data-v-e5238b]:hover {
+  position: relative;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=/app.a6a4d504.css.map */
