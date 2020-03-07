@@ -12906,7 +12906,265 @@ render._withStripped = true
       
       }
     })();
-},{"./icon":"src/icon.vue","_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/app.js":[function(require,module,exports) {
+},{"./icon":"src/icon.vue","_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/row.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+//
+//
+var _default = {
+  name: 'jluzh-Row',
+  props: {
+    gutter: {
+      type: [Number, String]
+    },
+    align: {
+      type: String,
+      validator: function validator(value) {
+        return ['left', 'right', 'center'].indexOf(value) >= 0;
+      }
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$children.forEach(function (vm) {
+      vm.gutter = _this.gutter;
+    });
+  },
+  computed: {
+    rowStyle: function rowStyle() {
+      var gutter = this.gutter;
+      return {
+        marginLeft: -gutter / 2 + 'px',
+        marginRight: -gutter / 2 + 'px'
+      };
+    },
+    rowClass: function rowClass() {
+      var align = this.align;
+      return [align && "align-".concat(align)];
+    }
+  }
+};
+exports.default = _default;
+        var $a4a34b = exports.default || module.exports;
+      
+      if (typeof $a4a34b === 'function') {
+        $a4a34b = $a4a34b.options;
+      }
+    
+        /* template */
+        Object.assign($a4a34b, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "jluzh-row", class: _vm.rowClass, style: _vm.rowStyle },
+    [_vm._t("default")],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-a4a34b",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$a4a34b', $a4a34b);
+          } else {
+            api.reload('$a4a34b', $a4a34b);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/col.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+//
+//
+//
+//
+//
+var validator = function validator(value) {
+  var keys = Object.keys(value);
+  var valid = true;
+  keys.forEach(function (key) {
+    if (!['span', 'offset'].includes(key)) {
+      valid = false;
+    }
+  });
+  return valid;
+};
+
+var _default = {
+  name: 'jluzh-Col',
+  data: function data() {
+    return {
+      gutter: 0
+    };
+  },
+  props: {
+    span: {
+      type: [Number, String]
+    },
+    offset: {
+      type: [Number, String]
+    },
+    ipad: {
+      type: Object,
+      validator: validator
+    },
+    narrowPc: {
+      type: Object,
+      validator: validator
+    },
+    pc: {
+      type: Object,
+      validator: validator
+    },
+    widthPc: {
+      type: Object,
+      validator: validator
+    }
+  },
+  computed: {
+    colClass: function colClass() {
+      var span = this.span,
+          offset = this.offset,
+          ipad = this.ipad,
+          narrowPc = this.narrowPc,
+          pc = this.pc,
+          widthPc = this.widthPc;
+      var createClasses = this.createClasses;
+      return [].concat(_toConsumableArray(createClasses({
+        span: span,
+        offset: offset
+      })), _toConsumableArray(createClasses(ipad, 'ipad-')), _toConsumableArray(createClasses(narrowPc, 'narrowPc-')), _toConsumableArray(createClasses(pc, 'pc-')), _toConsumableArray(createClasses(widthPc, 'widthPc-')));
+    },
+    colStyle: function colStyle() {
+      return {
+        paddingLeft: this.gutter / 2 + 'px',
+        paddingRight: this.gutter / 2 + 'px'
+      };
+    }
+  },
+  methods: {
+    createClasses: function createClasses(obj) {
+      var str = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+
+      if (!obj) {
+        return [];
+      }
+
+      var array = [];
+
+      if (obj.span) {
+        array.push("col-".concat(str).concat(obj.span));
+      }
+
+      if (obj.offset) {
+        array.push("offset-".concat(str).concat(obj.offset));
+      }
+
+      return array;
+    }
+  }
+};
+exports.default = _default;
+        var $29f3a5 = exports.default || module.exports;
+      
+      if (typeof $29f3a5 === 'function') {
+        $29f3a5 = $29f3a5.options;
+      }
+    
+        /* template */
+        Object.assign($29f3a5, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "jluzh-col", class: _vm.colClass, style: _vm.colStyle },
+    [_vm._t("default")],
+    2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-29f3a5",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$29f3a5', $29f3a5);
+          } else {
+            api.reload('$29f3a5', $29f3a5);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -12919,6 +13177,10 @@ var _icon = _interopRequireDefault(require("./icon"));
 
 var _input = _interopRequireDefault(require("./input"));
 
+var _row = _interopRequireDefault(require("./row"));
+
+var _col = _interopRequireDefault(require("./col"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _vue.default.component('jluzh-button', _button.default);
@@ -12928,6 +13190,10 @@ _vue.default.component('jluzh-button-group', _buttonGroup.default);
 _vue.default.component('jluzh-icon', _icon.default);
 
 _vue.default.component('jluzh-input', _input.default);
+
+_vue.default.component('jluzh-row', _row.default);
+
+_vue.default.component('jluzh-col', _col.default);
 
 new _vue.default({
   el: '#app',
@@ -12946,7 +13212,7 @@ new _vue.default({
     }
   }
 });
-},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./button-group":"src/button-group.vue","./icon":"src/icon.vue","./input":"src/input.vue"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.common.js","./button":"src/button.vue","./button-group":"src/button-group.vue","./icon":"src/icon.vue","./input":"src/input.vue","./row":"src/row.vue","./col":"src/col.vue"}],"../../../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -12974,7 +13240,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "2434" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1327" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
