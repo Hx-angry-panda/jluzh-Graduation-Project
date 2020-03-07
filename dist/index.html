@@ -7,50 +7,14 @@
 <link rel="stylesheet" href="/app.a6a4d504.css"></head>
 <body>
     <div id="app" style="overflow:hidden;">
-        <jluzh-row gutter="300">
-            <jluzh-col span="8">
-                <div style="background: red;">1</div>
-            </jluzh-col>
-            <jluzh-col span="8">
-                <div style="background: green;">2</div>
-            </jluzh-col>
-            <jluzh-col span="8">
-                <div style="background: blue;">3</div>
-            </jluzh-col>
-        </jluzh-row>
-        <jluzh-row>
-            <jluzh-col span="10">
-                <div style="background: red;">1</div>
-            </jluzh-col>
-            <jluzh-col span="10">
-                <div style="background: green;">2</div>
-            </jluzh-col>
-            <jluzh-col span="4">
-                <div style="background: blue;">3</div>
-            </jluzh-col>
-        </jluzh-row>
-        <jluzh-row>
-            <jluzh-col span="8" :ipad="{span:5,offset:5}" :narrow-pc="{span:3,offset:3}" :pc="{span:4,offset:4}" :wide-pc="{span:2,offset:2}">
-                <div style="background: red;">1</div>
-            </jluzh-col>
-            <jluzh-col span="8" :ipad="{span:5,offset:5}" :narrow-pc="{span:3,offset:3}" :pc="{span:4,offset:4}" :wide-pc="{span:5,offset:5}">
-                <div style="background: green;">2</div>
-            </jluzh-col>
-            <jluzh-col span="8" :ipad="{span:2,offset:2}" :narrow-pc="{span:6,offset:6}" :pc="{span:4,offset:4}" :wide-pc="{span:5,offset:5}">
-                <div style="background: blue;">3</div>
-            </jluzh-col>
-        </jluzh-row>
-        <jluzh-row align="right">
-            <jluzh-col span="6">
-                <div style="background: red;">1</div>
-            </jluzh-col>
-            <jluzh-col span="6">
-                <div style="background: green;">2</div>
-            </jluzh-col>
-            <jluzh-col span="6">
-                <div style="background: blue;">3</div>
-            </jluzh-col>
-        </jluzh-row>
+        <jluzh-layout>
+            <jluzh-header>header</jluzh-header>
+            <jluzh-layout>
+                <jluzh-sider>sider</jluzh-sider>
+                <jluzh-content>content</jluzh-content>
+            </jluzh-layout>
+            <jluzh-footer>footer</jluzh-footer>
+        </jluzh-layout>
     </div>
 <!--    <jluzh-button>按钮</jluzh-button>-->
 <!--    <jluzh-button disabled>禁用</jluzh-button>-->
@@ -76,6 +40,51 @@
 <!--    <jluzh-input @change="changeInput"></jluzh-input>-->
 <!--    <jluzh-input @focus="focusInput"></jluzh-input>-->
 <!--    <jluzh-input @blur="blurInput"></jluzh-input>-->
+
+<!--    <jluzh-row gutter="300">-->
+<!--        <jluzh-col span="8">-->
+<!--            <div style="background: red;">1</div>-->
+<!--        </jluzh-col>-->
+<!--        <jluzh-col span="8">-->
+<!--            <div style="background: green;">2</div>-->
+<!--        </jluzh-col>-->
+<!--        <jluzh-col span="8">-->
+<!--            <div style="background: blue;">3</div>-->
+<!--        </jluzh-col>-->
+<!--    </jluzh-row>-->
+<!--    <jluzh-row>-->
+<!--        <jluzh-col span="10">-->
+<!--            <div style="background: red;">1</div>-->
+<!--        </jluzh-col>-->
+<!--        <jluzh-col span="10">-->
+<!--            <div style="background: green;">2</div>-->
+<!--        </jluzh-col>-->
+<!--        <jluzh-col span="4">-->
+<!--            <div style="background: blue;">3</div>-->
+<!--        </jluzh-col>-->
+<!--    </jluzh-row>-->
+<!--    <jluzh-row>-->
+<!--        <jluzh-col span="8" :ipad="{span:5,offset:5}" :narrow-pc="{span:3,offset:3}" :pc="{span:4,offset:4}" :wide-pc="{span:2,offset:2}">-->
+<!--            <div style="background: red;">1</div>-->
+<!--        </jluzh-col>-->
+<!--        <jluzh-col span="8" :ipad="{span:5,offset:5}" :narrow-pc="{span:3,offset:3}" :pc="{span:4,offset:4}" :wide-pc="{span:5,offset:5}">-->
+<!--            <div style="background: green;">2</div>-->
+<!--        </jluzh-col>-->
+<!--        <jluzh-col span="8" :ipad="{span:2,offset:2}" :narrow-pc="{span:6,offset:6}" :pc="{span:4,offset:4}" :wide-pc="{span:5,offset:5}">-->
+<!--            <div style="background: blue;">3</div>-->
+<!--        </jluzh-col>-->
+<!--    </jluzh-row>-->
+<!--    <jluzh-row align="right">-->
+<!--        <jluzh-col span="6">-->
+<!--            <div style="background: red;">1</div>-->
+<!--        </jluzh-col>-->
+<!--        <jluzh-col span="6">-->
+<!--            <div style="background: green;">2</div>-->
+<!--        </jluzh-col>-->
+<!--        <jluzh-col span="6">-->
+<!--            <div style="background: blue;">3</div>-->
+<!--        </jluzh-col>-->
+<!--    </jluzh-row>-->
     <script src="/app.a6a4d504.js"></script>
 </body>
 </html>
