@@ -6,15 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app" style="overflow:hidden;">
-        <jluzh-layout>
-            <jluzh-header>header</jluzh-header>
-            <jluzh-layout>
-                <jluzh-sider>sider</jluzh-sider>
-                <jluzh-content>content</jluzh-content>
-            </jluzh-layout>
-            <jluzh-footer>footer</jluzh-footer>
-        </jluzh-layout>
+    <div id="app" style="padding: 100px;">
+        <jluzh-collapse :selected.sync="selectedCollapse" single>
+            <jluzh-collapse-item title="Collapse1" name="1">内容1</jluzh-collapse-item>
+            <jluzh-collapse-item title="Collapse2" name="2">内容2</jluzh-collapse-item>
+            <jluzh-collapse-item title="Collapse3" name="3">内容3</jluzh-collapse-item>
+        </jluzh-collapse>
+
+
     </div>
 <!--    <jluzh-button>按钮</jluzh-button>-->
 <!--    <jluzh-button disabled>禁用</jluzh-button>-->
@@ -85,6 +84,15 @@
 <!--            <div style="background: blue;">3</div>-->
 <!--        </jluzh-col>-->
 <!--    </jluzh-row>-->
+
+<!--    <jluzh-layout>-->
+<!--        <jluzh-header>header</jluzh-header>-->
+<!--        <jluzh-layout>-->
+<!--            <jluzh-sider>sider</jluzh-sider>-->
+<!--            <jluzh-content>content</jluzh-content>-->
+<!--        </jluzh-layout>-->
+<!--        <jluzh-footer>footer</jluzh-footer>-->
+<!--    </jluzh-layout>-->
     <script src="./src/app.js"></script>
 </body>
 </html>

@@ -10,6 +10,8 @@ import Header from './header'
 import Content from './content'
 import Sider from './sider'
 import Footer from './footer'
+import Collapse from './collapse'
+import CollapseItem from './collapse-item'
 
 Vue.component('jluzh-button',Button)
 Vue.component('jluzh-button-group',ButtonGroup)
@@ -22,9 +24,14 @@ Vue.component('jluzh-header',Header)
 Vue.component('jluzh-content',Content)
 Vue.component('jluzh-sider',Sider)
 Vue.component('jluzh-footer',Footer)
+Vue.component('jluzh-collapse',Collapse)
+Vue.component('jluzh-collapse-item',CollapseItem)
 
 new Vue({
     el: '#app',
+    data: {
+        selectedCollapse: ['1','2','3']
+    },
     methods: {
         inputInput: function (e) {
             console.log(e)
