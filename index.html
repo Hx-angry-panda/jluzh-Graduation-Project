@@ -6,93 +6,93 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app" style="padding: 100px;">
+    <div id="app">
         <jluzh-collapse :selected.sync="selectedCollapse" single>
             <jluzh-collapse-item title="Collapse1" name="1">内容1</jluzh-collapse-item>
             <jluzh-collapse-item title="Collapse2" name="2">内容2</jluzh-collapse-item>
             <jluzh-collapse-item title="Collapse3" name="3">内容3</jluzh-collapse-item>
         </jluzh-collapse>
 
+        <jluzh-button>按钮</jluzh-button>
+        <jluzh-button disabled>禁用</jluzh-button>
+        <jluzh-button icon="download" icon-position="right">你好</jluzh-button>
+        <jluzh-button icon="like">你好</jluzh-button>
 
+        <jluzh-button-group>
+            <jluzh-button>按</jluzh-button>
+            <jluzh-button>你好</jluzh-button>
+            <jluzh-button>你好</jluzh-button>
+            <jluzh-button>你好</jluzh-button>
+            <jluzh-button>你好</jluzh-button>
+        </jluzh-button-group>
+
+        <jluzh-icon name="setting"></jluzh-icon>
+        <jluzh-icon name="download"></jluzh-icon>
+
+        <jluzh-input value="哈哈"></jluzh-input>
+        <jluzh-input value="禁止状态" disabled></jluzh-input>
+        <jluzh-input value="禁止编辑" readonly></jluzh-input>
+        <jluzh-input type="password" value="123456" iserror="错误"></jluzh-input>
+        <jluzh-input @input="inputInput"></jluzh-input>
+        <jluzh-input @change="changeInput"></jluzh-input>
+        <jluzh-input @focus="focusInput"></jluzh-input>
+        <jluzh-input @blur="blurInput"></jluzh-input>
+
+        <jluzh-row gutter="300">
+            <jluzh-col span="8">
+                <div style="background: red;">1</div>
+            </jluzh-col>
+            <jluzh-col span="8">
+                <div style="background: green;">2</div>
+            </jluzh-col>
+            <jluzh-col span="8">
+                <div style="background: blue;">3</div>
+            </jluzh-col>
+        </jluzh-row>
+        <jluzh-row>
+            <jluzh-col span="10">
+                <div style="background: red;">1</div>
+            </jluzh-col>
+            <jluzh-col span="10">
+                <div style="background: green;">2</div>
+            </jluzh-col>
+            <jluzh-col span="4">
+                <div style="background: blue;">3</div>
+            </jluzh-col>
+        </jluzh-row>
+        <jluzh-row>
+            <jluzh-col span="8" :ipad="{span:5,offset:5}" :narrow-pc="{span:3,offset:3}" :pc="{span:4,offset:4}" :wide-pc="{span:2,offset:2}">
+                <div style="background: red;">1</div>
+            </jluzh-col>
+            <jluzh-col span="8" :ipad="{span:5,offset:5}" :narrow-pc="{span:3,offset:3}" :pc="{span:4,offset:4}" :wide-pc="{span:5,offset:5}">
+                <div style="background: green;">2</div>
+            </jluzh-col>
+            <jluzh-col span="8" :ipad="{span:2,offset:2}" :narrow-pc="{span:6,offset:6}" :pc="{span:4,offset:4}" :wide-pc="{span:5,offset:5}">
+                <div style="background: blue;">3</div>
+            </jluzh-col>
+        </jluzh-row>
+        <jluzh-row align="right">
+            <jluzh-col span="6">
+                <div style="background: red;">1</div>
+            </jluzh-col>
+            <jluzh-col span="6">
+                <div style="background: green;">2</div>
+            </jluzh-col>
+            <jluzh-col span="6">
+                <div style="background: blue;">3</div>
+            </jluzh-col>
+        </jluzh-row>
+
+        <jluzh-layout>
+            <jluzh-header>header</jluzh-header>
+            <jluzh-layout>
+                <jluzh-sider>sider</jluzh-sider>
+                <jluzh-content>content</jluzh-content>
+            </jluzh-layout>
+            <jluzh-footer>footer</jluzh-footer>
+        </jluzh-layout>
     </div>
-<!--    <jluzh-button>按钮</jluzh-button>-->
-<!--    <jluzh-button disabled>禁用</jluzh-button>-->
-<!--    <jluzh-button icon="download" icon-position="right">你好</jluzh-button>-->
-<!--    <jluzh-button icon="like">你好</jluzh-button>-->
 
-<!--    <jluzh-button-group>-->
-<!--        <jluzh-button>按</jluzh-button>-->
-<!--        <jluzh-button>你好</jluzh-button>-->
-<!--        <jluzh-button>你好</jluzh-button>-->
-<!--        <jluzh-button>你好</jluzh-button>-->
-<!--        <jluzh-button>你好</jluzh-button>-->
-<!--    </jluzh-button-group>-->
-
-<!--    <jluzh-icon name="setting"></jluzh-icon>-->
-<!--    <jluzh-icon name="download"></jluzh-icon>-->
-
-<!--    <jluzh-input value="哈哈"></jluzh-input>-->
-<!--    <jluzh-input value="禁止状态" disabled></jluzh-input>-->
-<!--    <jluzh-input value="禁止编辑" readonly></jluzh-input>-->
-<!--    <jluzh-input type="password" value="123456" iserror="错误"></jluzh-input>-->
-<!--    <jluzh-input @input="inputInput"></jluzh-input>-->
-<!--    <jluzh-input @change="changeInput"></jluzh-input>-->
-<!--    <jluzh-input @focus="focusInput"></jluzh-input>-->
-<!--    <jluzh-input @blur="blurInput"></jluzh-input>-->
-
-<!--    <jluzh-row gutter="300">-->
-<!--        <jluzh-col span="8">-->
-<!--            <div style="background: red;">1</div>-->
-<!--        </jluzh-col>-->
-<!--        <jluzh-col span="8">-->
-<!--            <div style="background: green;">2</div>-->
-<!--        </jluzh-col>-->
-<!--        <jluzh-col span="8">-->
-<!--            <div style="background: blue;">3</div>-->
-<!--        </jluzh-col>-->
-<!--    </jluzh-row>-->
-<!--    <jluzh-row>-->
-<!--        <jluzh-col span="10">-->
-<!--            <div style="background: red;">1</div>-->
-<!--        </jluzh-col>-->
-<!--        <jluzh-col span="10">-->
-<!--            <div style="background: green;">2</div>-->
-<!--        </jluzh-col>-->
-<!--        <jluzh-col span="4">-->
-<!--            <div style="background: blue;">3</div>-->
-<!--        </jluzh-col>-->
-<!--    </jluzh-row>-->
-<!--    <jluzh-row>-->
-<!--        <jluzh-col span="8" :ipad="{span:5,offset:5}" :narrow-pc="{span:3,offset:3}" :pc="{span:4,offset:4}" :wide-pc="{span:2,offset:2}">-->
-<!--            <div style="background: red;">1</div>-->
-<!--        </jluzh-col>-->
-<!--        <jluzh-col span="8" :ipad="{span:5,offset:5}" :narrow-pc="{span:3,offset:3}" :pc="{span:4,offset:4}" :wide-pc="{span:5,offset:5}">-->
-<!--            <div style="background: green;">2</div>-->
-<!--        </jluzh-col>-->
-<!--        <jluzh-col span="8" :ipad="{span:2,offset:2}" :narrow-pc="{span:6,offset:6}" :pc="{span:4,offset:4}" :wide-pc="{span:5,offset:5}">-->
-<!--            <div style="background: blue;">3</div>-->
-<!--        </jluzh-col>-->
-<!--    </jluzh-row>-->
-<!--    <jluzh-row align="right">-->
-<!--        <jluzh-col span="6">-->
-<!--            <div style="background: red;">1</div>-->
-<!--        </jluzh-col>-->
-<!--        <jluzh-col span="6">-->
-<!--            <div style="background: green;">2</div>-->
-<!--        </jluzh-col>-->
-<!--        <jluzh-col span="6">-->
-<!--            <div style="background: blue;">3</div>-->
-<!--        </jluzh-col>-->
-<!--    </jluzh-row>-->
-
-<!--    <jluzh-layout>-->
-<!--        <jluzh-header>header</jluzh-header>-->
-<!--        <jluzh-layout>-->
-<!--            <jluzh-sider>sider</jluzh-sider>-->
-<!--            <jluzh-content>content</jluzh-content>-->
-<!--        </jluzh-layout>-->
-<!--        <jluzh-footer>footer</jluzh-footer>-->
-<!--    </jluzh-layout>-->
     <script src="./src/app.js"></script>
 </body>
 </html>

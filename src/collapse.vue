@@ -49,6 +49,7 @@
     }
 </script>
 <style lang="scss" scoped>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
     $border-color: #CCCCCC;
     $collapse-width: 300px;
     .jluzh-collapse{

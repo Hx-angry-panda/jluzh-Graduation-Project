@@ -19,9 +19,12 @@
 </script>
 
 <style lang="scss" scoped>
+    $icon-width: 16px;
+    $icon-height: 16px;
+    *{margin: 0; padding: 0; box-sizing: border-box;}
     .jluzh-icon{
-        width: var(--icon-width);
-        height: var(--icon-height);
+        width: $icon-width;
+        height: $icon-height;
         vertical-align: middle;
     }
 </style>

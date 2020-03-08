@@ -52,6 +52,19 @@
     }
 </script>
 <style lang="scss" scoped>
+    $input-width: 140px;
+    $input-padding: 7px 0.5em;
+    $input-color: #555555;
+    $input-font-size: 16px;
+    $input-border-color: #CCCCCC;
+    $input-hover-color: #40A9FF;
+    $input-disable-color: #AAAAAA;
+    $input-disable-bg: #F2F2F2;
+    $input-disable-border-color: #CCCCCC;
+    $input-readonly-color: #AAAAAA;
+    $input-readonly-bg: #F2F2F2;
+    $input-readonly-border-color: #CCCCCC;
+    *{margin: 0; padding: 0; box-sizing: border-box;}
     .jluzh-input{
         display: inline-flex;
         justify-content: center;
@@ -61,28 +74,27 @@
             margin-right: .5em;
         }
         > input {
-            width: var(--input-width);
-            padding: var(--input-padding);
-            color: var(--input-color);
-            font-size: var(--input-font-size);
-            line-height: var(--input-font-size);
-            border: var(--input-border);
-            border-color: var(--input-border-color);
-            border-radius: var(--input-border-radius);
+            width: $input-width;
+            padding: $input-padding;
+            color: $input-color;
+            font-size: $input-font-size;
+            line-height: $input-font-size;
+            border: 1px solid $input-border-color;
+            border-radius: 5px;
             outline: none;
             &:hover,&:focus{
-                border-color: var(--input-hover-color);
+                border-color: $input-hover-color;
             }
             &[disabled]{
-                color: var(--input-disable-color);
-                background: var(--input-disable-bg);
-                border-color: var(--input-disable-border-color);
+                color: $input-disable-color;
+                background: $input-disable-bg;
+                border-color: $input-disable-border-color;
                 cursor: not-allowed;
             }
             &[readonly]{
-                color: var(--input-readonly-color);
-                background: var(--input-readonly-bg);
-                border-color: var(--input-readonly-border-color);
+                color: $input-readonly-color;
+                background: $input-readonly-bg;
+                border-color: $input-readonly-border-color;
             }
         }
     }

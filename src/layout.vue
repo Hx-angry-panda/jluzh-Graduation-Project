@@ -24,6 +24,7 @@
 </script>
 <style lang="scss" scoped>
     $layout-height: 100vh;
+    *{margin: 0; padding: 0; box-sizing: border-box;}
     .jluzh-layout{
         display: flex;
         flex-direction: column;

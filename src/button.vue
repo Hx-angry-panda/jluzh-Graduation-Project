@@ -33,28 +33,36 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "../style.css";
+    $button-font-color: #555555;
+    $button-border-color: #CCCCCC;
+    $button-font-size: 16px;
+    $button-bg: white;
+    $button-hover-color: #40A9FF;
+    $button-active-color: #007BFF;
+    $button-disabled-color: #AAAAAA;
+    $button-disabled-bg: #F2F2F2;
+    $button-disabled-border-color: #CCCCCC;
+    *{margin: 0; padding: 0; box-sizing: border-box;}
     .jluzh-button{
         display: inline-flex;
         justify-content: center;
         align-items: center;
         vertical-align: middle;
-        padding: var(--button-padding);
-        color: var(--button-font-color);
-        border: 1px solid;
-        border-color: var(--button-border-color);
-        border-radius: var(--button-border-radius);
-        font-size: var(--button-font-size);
-        line-height: var(--button-font-size);
-        background: var(--button-bg);
+        padding: 7px 10px;
+        color: $button-font-color;
+        border: 1px solid $button-border-color;
+        border-radius: 5px;
+        font-size: $button-font-size;
+        line-height: $button-font-size;
+        background: $button-bg;
         outline: none;
         &:hover{
-            color: var(--button-hover-color);
-            border-color: var(--button-hover-color);
+            color: $button-hover-color;
+            border-color: $button-hover-color;
         }
         &:active{
-            color: var(--button-active-color);
-            border-color: var(--button-active-color);
+            color: $button-active-color;
+            border-color: $button-active-color;
         }
         > .icon{
             margin-right: 0.5em;
@@ -66,17 +74,17 @@
         
     }
     .isDisabled{
-        color: var(--button-disabled-color);
-        background: var(--button-disabled-bg);
-        border-color: var(--button-button-border-color);
+        color: $button-disabled-color;
+        background: $button-disabled-bg;
+        border-color: $button-disabled-border-color;
         cursor: not-allowed;
         &:hover{
-            color: var(--button-disabled-color);
-            border-color: var(--button-button-border-color);
+            color: $button-disabled-color;
+            border-color: $button-disabled-border-color;
         }
         &:active{
-            color: var(--button-disabled-color);
-            background: var(--button-disabled-bg);
+            color: $button-disabled-color;
+            background: $button-disabled-bg;
         }
     }
     .icon-right{

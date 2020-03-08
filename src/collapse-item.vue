@@ -53,6 +53,7 @@
     $title-color: #F2F2F2;
     $font-color: #555555;
     $content-background: #FFFFFF;
+    *{margin: 0; padding: 0; box-sizing: border-box;}
     .jluzh-collapse-item{
         > .title{
             border-top: 1px solid $border-color;

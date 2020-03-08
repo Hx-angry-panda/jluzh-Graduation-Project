@@ -17,18 +17,19 @@
     }
 </script>
 <style lang="scss" scoped>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
     .jluzh-button-group{
         display: inline-flex;
         vertical-align: middle;
         > .jluzh-button{
             border-radius: 0;
             &:first-child{
-                border-top-left-radius: var(--button-border-radius);
-                border-bottom-left-radius: var(--button-border-radius);
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
             }
             &:last-child{
-                border-top-right-radius: var(--button-border-radius);
-                border-bottom-right-radius: var(--button-border-radius);
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
             }
             &:not(:first-child){
                 margin-left: -1px;

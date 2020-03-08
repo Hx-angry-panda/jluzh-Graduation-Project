@@ -82,6 +82,7 @@
     }
 </script>
 <style lang="scss" scoped>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
     .jluzh-col{
         width: 50%;
         $class-prefix: col-;
