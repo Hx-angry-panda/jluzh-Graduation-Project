@@ -1,6 +1,6 @@
 {
   "name": "jluzh-hx",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "面向网页制作的ui组件库",
   "main": "dist/index.js",
   "scripts": {
