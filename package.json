@@ -4,7 +4,9 @@
   "description": "面向网页制作的ui组件库",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,8 @@
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.1.1",
     "sass": "^1.26.2",
-    "vue-template-compiler": "^2.6.11"
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.3.1"
   }
 }

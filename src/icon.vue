@@ -3,7 +3,6 @@
         <use v-bind:xlink:href="`#icon-${name}`"/>
     </svg>
 </template>
-
 <script>
     import './svg.js'
     export default {
@@ -17,7 +16,6 @@
         }
     }
 </script>
-
 <style lang="scss" scoped>
     $icon-width: 16px;
     $icon-height: 16px;
