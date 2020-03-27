@@ -12489,7 +12489,6 @@ require("./svg.js");
 //
 //
 //
-//
 var _default = {
   name: 'jluzh-Icon',
   props: {
@@ -13828,7 +13827,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "6751" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "10648" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
