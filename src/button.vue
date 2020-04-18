@@ -65,7 +65,6 @@
             border-color: $button-active-color;
         }
         > .icon{
-            margin-right: 0.5em;
             order: 1;
         }
         > .content{
